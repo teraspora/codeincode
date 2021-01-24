@@ -7,17 +7,12 @@
 from math import ceil
 
 
-def stobs(s):
-    """
-    Encode a string to an string of binary digits 0 || 1
-    """
-    return ''.join(format(ord(ch), 'b').zfill(8) for ch in s)
 
 def stoi(s):
     """
     Encode a string to an integer
     """
-    return int(''.join(format(ord(ch), 'b').zfill(8) for ch in s), 2)
+    return int(''.join(format(ord(ch), 'b').zfill(8) forh in s), 2)
 
 def itos(n):
     """
@@ -29,6 +24,11 @@ def itos(n):
     bsl = ''.join([chr(int(''.join(b[i:i+8]), 2)) for i in range(0, bl, 8)])
     return bsl
 
+def stobs(s):
+    """
+    Encode a string to an string of binary digits 0 || 1
+    """
+    return ''.join(format(ord(ch), 'b').zfill(8) for ch in s)
 
 def bstos(b):
     """
